@@ -61,7 +61,7 @@ img {
   list-style: none;
 }
 /* Шапка */
-.page-header {
+.header {
   display: flex;
   border-bottom: 1px solid var(--border-bottom-color);
 }
@@ -186,17 +186,7 @@ img {
 .nav-cont:focus .header-img {
   fill: var(--accent-color);
 }
-/* .nav-cont-link::after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  width: 100%;
-  height: 4px;
-  border-radius: 4px;
-  background-color: transparent;
-} */
+
 /* Герой */
 
 .hero {
@@ -216,21 +206,7 @@ img {
   margin-right: auto;
 }
 
-/* max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  background-position: center;
-  background-size: cover;
-  background: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    cover no-repeat url(../photo/studio-bgimage.jpg);
- */
-.hero-btn {
+.hero__btn {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -252,7 +228,7 @@ img {
   cursor: pointer;
 }
 
-.hero-tittle {
+.hero__tittle {
   width: 696px;
 
   margin-left: auto;
@@ -273,60 +249,60 @@ img {
 .hidden-tittle {
   display: none;
 }
-.features-list {
+.features__list {
   display: flex;
   gap: 30px;
 }
-.features-tittle {
+.features__tittle {
   font-weight: 700;
   line-height: 1.14;
   margin-left: 0;
   text-transform: uppercase;
   color: var(--h2-h3-link-color);
 }
-.feature-item {
+.feature__item {
   width: 270px;
   height: 120px;
   background-color: var(--crew-bg-color);
   border-radius: 4px;
 }
-.feature-svg {
+.feature__svg {
   margin-bottom: 30px;
   width: 270px;
   height: 120px;
 }
-.icon-antenna {
+.feature--antenna {
   background-image: url(../images/icons/antenna.svg);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
 }
-.icon-clock {
+.feature--clock {
   background-image: url(../images/icons/clock.svg);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
 }
-.icon-diagram {
+.feature--diagram {
   background-image: url(../images/icons/diagram.svg);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
 }
-.icon-austronavt {
+.feature--austronavt {
   background-image: url(../images/icons/austronavt.svg);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
 }
-.features-text {
+.features__tittle--text {
   margin-top: 10px;
   margin-left: 0;
   font-weight: 400;
   line-height: 1.71;
 }
 /* Чим ми займаємось */
-.service-tittle {
+.service__tittle {
   display: block;
   margin-bottom: 50px;
   font-weight: 700;
@@ -336,12 +312,12 @@ img {
   text-align: center;
   color: var(--h2-h3-link-color);
 }
-.service-menu {
+.service__menu {
   display: flex;
   gap: 30px;
 }
 
-.service-acctions {
+.service__acctions {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -350,7 +326,7 @@ img {
   background-color: var(--service-acction-color);
   color: var(--body-bg-color);
 }
-.service-acction-tittle {
+.service--tittle {
   padding-top: 27px;
   font-weight: 700;
   font-size: 14px;
@@ -359,7 +335,7 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
-.service-menu-item {
+.service__item {
   position: relative;
 }
 /* Команда */
@@ -441,7 +417,7 @@ img {
 .clients {
   padding: 94px 215px;
 }
-.cliens-tittle {
+.cliens__tittle {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -451,18 +427,18 @@ img {
 
   color: var(--h2-h3-link-color);
 }
-.clients-list {
+.clients__list {
   display: flex;
   gap: 30px;
 }
-.clients-item {
+.clients__item {
   width: 170px;
   height: 92px;
 
   border-radius: 4px;
 }
 
-.client-link {
+.client__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -475,11 +451,11 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.client-link:hover {
+.client__link:hover {
   border-color: var(--accent-color);
   color: var(--accent-color);
 }
-.client-icon {
+.client--icon {
   fill: currentColor;
 }
 /* Футер */
@@ -579,10 +555,6 @@ img {
   padding-right: 25px;
   background-color: var(--backdrop-color);
   color: var(--body-bg-color);
-
-  /* transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .portfolio-works {
