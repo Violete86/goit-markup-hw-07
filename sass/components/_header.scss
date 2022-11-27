@@ -3,21 +3,6 @@
     border-bottom: 1px solid var(--border-bottom-color);
 }
 
-.container {
-    width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-.section {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
-
-.section--no-padding {
-    padding-top: 0;
-}
-
 .header__nav {
     display: flex;
     align-items: center;
@@ -72,11 +57,11 @@
     color: var(--accent-color);
 }
 
-.nav--current {
+.nav__link--current {
 color: var(--accent-color);
 }
 
-.nav--current::after {
+.nav__link--current::after {
     content: "";
     display: block;
     position: absolute;

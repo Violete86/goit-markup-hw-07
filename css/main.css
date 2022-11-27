@@ -88,18 +88,6 @@ img {
   list-style: none;
 }
 
-/**
-  |============================
-  | Components styles
-  |============================
-*/
-.header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border-bottom: 1px solid var(--border-bottom-color);
-}
-
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -113,6 +101,18 @@ img {
 
 .section--no-padding {
   padding-top: 0;
+}
+
+/**
+  |============================
+  | Components styles
+  |============================
+*/
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid var(--border-bottom-color);
 }
 
 .header__nav {
@@ -179,11 +179,11 @@ img {
   color: var(--accent-color);
 }
 
-.nav--current {
+.nav__link--current {
   color: var(--accent-color);
 }
 
-.nav--current::after {
+.nav__link--current::after {
   content: "";
   display: block;
   position: absolute;
