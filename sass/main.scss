@@ -1,2 +1,29 @@
-utils styles
-@import ''
+/**
+  |============================
+  | Utils styles
+  |============================
+*/
+@import './utils/vars';
+/**
+  |============================
+  | Base styles
+  |============================
+*/
+@import './base/base';
+@import './base/visually-hidden';
+@import './base/reset';
+/**
+  |============================
+  | Components styles
+  |============================
+*/
+@import './components/header';
+@import './components/hero';
+@import './components/features';
+@import './components/services';
+@import './components/crew';
+@import './components/clients';
+@import './components/footer';
+@import './components/subscribe';
+@import './components/modal';
+@import './components/portfolio';
