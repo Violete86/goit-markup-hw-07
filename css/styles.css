@@ -60,7 +60,24 @@ img {
   margin: 0px;
   list-style: none;
 }
-/* Шапка */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/**
+  |============================
+  | Шапка
+  |============================
+*/
 .header {
   display: flex;
   border-bottom: 1px solid var(--border-bottom-color);
@@ -76,7 +93,10 @@ img {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.header-nav {
+.section--no-padding {
+  padding-top: 0;
+}
+.header__nav {
   display: flex;
   align-items: center;
 }
@@ -98,17 +118,17 @@ img {
   letter-spacing: 0.02em;
 }
 
-.logo-wrap {
+.logo--wrap {
   color: var(--logo-text-color);
 }
-.nav-line {
+.nav__line {
   display: flex;
   align-items: center;
   margin-right: 93px;
   margin-left: 90px;
 }
 
-.nav-link {
+.nav__link {
   position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -126,10 +146,10 @@ img {
 .nav-link:focus {
   color: var(--accent-color);
 }
-.current {
+.nav--current {
   color: var(--accent-color);
 }
-.current::after {
+.nav--current::after {
   content: "";
   display: block;
   position: absolute;
@@ -140,18 +160,18 @@ img {
   border-radius: 4px;
   background-color: var(--accent-color);
 }
-.site-nav {
+.nav__site {
   display: flex;
   gap: 50px;
 }
 
-.site-cont {
+.nav__cont {
   display: flex;
   gap: 50px;
   margin-left: auto;
   align-items: center;
 }
-.header-img {
+.nav__link--img {
   display: inline;
   fill: var(--primary-text-color);
   margin-right: 10px;
@@ -159,11 +179,11 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header-img:hover,
-.header-img:focus {
+.nav__link--img:hover,
+.nav__link--img:focus {
   print-color-adjust: var(--accent-color);
 }
-.nav-cont {
+.nav__link {
   position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -178,16 +198,20 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav-cont:hover,
-.nav-cont:focus {
+.nav__link:hover,
+.nav__link:focus {
   color: var(--accent-color);
 }
-.nav-cont:hover .header-img,
-.nav-cont:focus .header-img {
+.nav__link:hover .nav__link--img,
+.nav__link:focus .nav__link--img {
   fill: var(--accent-color);
 }
 
-/* Герой */
+/**
+  |============================
+  | Герой
+  |============================
+*/
 
 .hero {
   max-width: 1600px;
@@ -244,64 +268,65 @@ img {
 
   color: var(--body-bg-color);
 }
-/* Характеристики */
+/**
+  |============================
+  | Характеристики
+  |============================
+*/
 
-.hidden-tittle {
-  display: none;
-}
 .features__list {
   display: flex;
   gap: 30px;
 }
-.features__tittle {
+.features__title {
   font-weight: 700;
   line-height: 1.14;
-  margin-left: 0;
+  margin-bottom: 10px;
   text-transform: uppercase;
   color: var(--h2-h3-link-color);
 }
-.feature__item {
+.features__item {
+  width: 270px;
+}
+.features__svg {
+  margin-bottom: 30px;
   width: 270px;
   height: 120px;
   background-color: var(--crew-bg-color);
   border-radius: 4px;
 }
-.feature__svg {
-  margin-bottom: 30px;
-  width: 270px;
-  height: 120px;
-}
-.feature--antenna {
+.features__svg--antenna {
   background-image: url(../images/icons/antenna.svg);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
 }
-.feature--clock {
+.features__svg--clock {
   background-image: url(../images/icons/clock.svg);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
 }
-.feature--diagram {
+.features__svg--diagram {
   background-image: url(../images/icons/diagram.svg);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
 }
-.feature--austronavt {
+.features__svg--austronavt {
   background-image: url(../images/icons/austronavt.svg);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
 }
-.features__tittle--text {
-  margin-top: 10px;
-  margin-left: 0;
-  font-weight: 400;
+.features__text {
   line-height: 1.71;
 }
-/* Чим ми займаємось */
+/**
+  |============================
+  | Чим ми звймаємось
+  |============================
+*/
 .service__tittle {
   display: block;
   margin-bottom: 50px;
@@ -317,7 +342,7 @@ img {
   gap: 30px;
 }
 
-.service__acctions {
+.service__actions {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -326,7 +351,7 @@ img {
   background-color: var(--service-acction-color);
   color: var(--body-bg-color);
 }
-.service--tittle {
+.service__title {
   padding-top: 27px;
   font-weight: 700;
   font-size: 14px;
@@ -338,7 +363,11 @@ img {
 .service__item {
   position: relative;
 }
-/* Команда */
+/**
+  |============================
+  | Команда
+  |============================
+*/
 .crew {
   background-color: var(--crew-bg-color);
 }
@@ -413,7 +442,11 @@ img {
   fill: currentColor;
 }
 
-/* Наші клієнти */
+/**
+  |============================
+  | Наші клієнти
+  |============================
+*/
 .clients {
   padding: 94px 215px;
 }
@@ -438,7 +471,7 @@ img {
   border-radius: 4px;
 }
 
-.client__link {
+.clients__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -451,14 +484,18 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.client__link:hover {
+.clients__link:hover {
   border-color: var(--accent-color);
   color: var(--accent-color);
 }
-.client--icon {
+.clients__icon {
   fill: currentColor;
 }
-/* Футер */
+/**
+  |============================
+  | Підвал
+  |============================
+*/
 .footer {
   display: flex;
   padding-top: 60px;
@@ -519,7 +556,11 @@ img {
 .social-icon-footer {
   fill: #ffffff;
 }
-/* Стилі для Портфоліо */
+/**
+  |============================
+  | Стилі для портфоліо
+  |============================
+*/
 
 .porfolio-menu {
   gap: 8px;
@@ -689,13 +730,15 @@ img {
   background-color: var(--accent-color);
   cursor: pointer;
 }
-.subscribe-btn:hover {
-}
 
 .subscribe-icon {
   margin-left: 10px;
 }
-/* Модальне вікно */
+/**
+  |============================
+  | Модальне вікно
+  |============================
+*/
 .backdrop {
   position: fixed;
   top: 0;
@@ -759,8 +802,6 @@ img {
   color: var(--h2-h3-link-color);
 }
 
-.modal-form {
-}
 .modal-form-label {
   display: flex;
   margin-bottom: 4px;
@@ -778,8 +819,7 @@ img {
   position: relative;
   margin-bottom: 10px;
 }
-.modal-form-comments {
-}
+
 .modal-form-field {
   padding-left: 42px;
   padding-right: 42px;
@@ -826,7 +866,11 @@ img {
   color: #212121;
 }
 
-/* Згода на умови */
+/**
+  |============================
+  | Згода на умови
+  |============================
+*/
 .modal-form-agreement {
   padding-left: 12px;
   display: flex;
