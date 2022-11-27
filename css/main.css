@@ -108,14 +108,14 @@ img {
   | Components styles
   |============================
 */
-.header {
+.page-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   border-bottom: 1px solid var(--border-bottom-color);
 }
 
-.header__nav {
+.header-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -141,11 +141,11 @@ img {
   letter-spacing: 0.02em;
 }
 
-.logo--wrap {
+.logo-wrap {
   color: var(--logo-text-color);
 }
 
-.nav__line {
+.nav-line {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -156,14 +156,14 @@ img {
   margin-left: 90px;
 }
 
-.nav__link {
+.nav-link {
   position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
   display: block;
   height: 80px;
-  font-weight: 500;
   line-height: 1.14;
+  font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--h2-h3-link-color);
   -webkit-transition-property: color;
@@ -179,11 +179,11 @@ img {
   color: var(--accent-color);
 }
 
-.nav__link--current {
+.current {
   color: var(--accent-color);
 }
 
-.nav__link--current::after {
+.current::after {
   content: "";
   display: block;
   position: absolute;
@@ -195,14 +195,14 @@ img {
   background-color: var(--accent-color);
 }
 
-.nav__site {
+.site-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 50px;
 }
 
-.nav__cont {
+.site-cont {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -213,7 +213,7 @@ img {
           align-items: center;
 }
 
-.nav__link--img {
+.header-img {
   display: inline;
   fill: var(--primary-text-color);
   margin-right: 10px;
@@ -225,13 +225,13 @@ img {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav__link--img:hover,
-.nav__link--img:focus {
+.header-img:hover,
+.header-img:focus {
   -webkit-print-color-adjust: var(--accent-color);
           print-color-adjust: var(--accent-color);
 }
 
-.nav__link {
+.nav-cont {
   position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -254,13 +254,13 @@ img {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav__link:hover,
-.nav__link:focus {
+.nav-cont:hover,
+.nav-cont:focus {
   color: var(--accent-color);
 }
 
-.nav__link:hover .nav__link--img,
-.nav__link:focus .nav__link--img {
+.nav-cont:hover .header-img,
+.nav-cont:focus .header-img {
   fill: var(--accent-color);
 }
 
